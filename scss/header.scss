@@ -1,0 +1,84 @@
+$color-claro: white;
+$color-primario: #21c08b;
+$color-secundario: #AB88FF;
+$fuente: 'Mulish', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $color-secundario;
+    font-family: $fuente;
+}
+
+.header {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img {
+    width: 12rem;
+    left: 0;
+    margin-left: 1.5rem;
+}
+
+.header__menu {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    text-align: right;
+    margin-left: -1.4rem;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu li {
+    margin: 1rem 0;
+}
+
+.header__menu li a {
+    color: $color-claro;
+    text-decoration: none;
+}
+
+.header__menu li a:hover {
+    text-decoration: underline;
+}
+
+.header__menu--profile {
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile img {
+    margin-right: .8rem;
+    width: 3rem;
+}
+
+.header__menu--profile p {
+    color: $color-claro;
+}
+
+
+
+

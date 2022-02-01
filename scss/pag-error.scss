@@ -1,0 +1,108 @@
+$color-claro: white;
+$color-primario: #21c08b;
+$color-secundario: #AB88FF;
+$fuente: 'Mulish', sans-serif;
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $color-secundario;
+    font-family: $fuente;
+}
+
+
+.header {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    color: $color-claro;
+    background-color: $color-primario;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img {
+    width: 12rem;
+    left: 0;
+    margin-left: 1.5rem;
+}
+
+main {
+    width: 100%;
+    min-height: 54rem;
+    background: linear-gradient($color-primario, $color-secundario);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    animation-duration: 3.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    color: $color-claro;
+    font-size: 5rem;
+}
+
+p {
+    animation-duration: 3.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    color: $color-claro;
+    font-size: 1.4rem;
+}
+
+@keyframes hinge {
+    0% {transform: rotate(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+    20%, 60% {transform: rotate(80deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+    40% {transform: rotate(60deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+    80% {transform: rotate(60deg) translateY(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+    100% {transform: translateY(700px);}
+}
+.hinge {
+    margin: 20px;
+    animation-name: hinge;
+}
+
+.footer {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    background-color: $color-secundario;;
+}
+
+.footer a {
+    color: $color-claro;
+    cursor: pointer;
+    padding-left: 3rem;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer a {
+        margin-top: 0.3rem
+    }
+}

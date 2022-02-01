@@ -1,0 +1,155 @@
+$color-claro: white;
+$color-primario: #21c08b;
+$color-secundario: #AB88FF;
+$fuente: 'Mulish', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $fuente;
+}
+
+.header {
+    width: 100%;
+    height: 6rem;
+    padding: 1rem;
+    color: $color-claro;
+    background-color: $color-primario;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__img {
+    width: 12rem;
+    left: 0;
+    margin-left: 1.5rem;
+}
+
+.register {
+    padding: 0 3rem;
+    min-height: calc(100vh - 20rem);
+    background: linear-gradient($color-primario, $color-secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register__container {
+    width: 32rem;
+    min-height: 55rem;
+    padding: 6rem 4.5rem 4rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--color-claro);
+    border-radius: 4rem;
+    color: $color-claro;
+    box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 50%);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.register__container h2 {
+    font-size: 1.6rem;
+}
+
+.register__container--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register__container--login {
+    font-size: 1.2rem;
+}
+
+.register__container--login {
+    display: flex;
+    justify-content: center;
+}
+
+.register__container--login a {
+    color: $color-claro;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.register__container--login a:hover {
+    text-decoration: underline;
+}
+
+.input {
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 2px solid $color-claro;
+    font-family: $fuente;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+    outline: none;
+    height: 4rem;
+}
+
+::placeholder {
+    color: $color-claro;
+}
+
+.button {
+    height: 4rem;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 2.5rem;
+    color: $color-claro;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: $fuente;
+}
+
+.footer {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    background-color: $color-secundario;
+}
+
+.footer a {
+    color: $color-claro;
+    cursor: pointer;
+    padding-left: 3rem;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .register__container {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer a {
+        margin-top: 0.3rem
+    }
+}

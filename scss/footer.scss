@@ -1,0 +1,46 @@
+$color-claro: white;
+$color-primario: #21c08b;
+$color-secundario: #AB88FF;
+$fuente: 'Mulish', sans-serif;
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $fuente;
+}
+
+.footer {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    background-color: $color-secundario;
+}
+
+.footer a {
+    color: $color-claro;
+    cursor: pointer;
+    padding-left: 3rem;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer a {
+        margin-top: 0.3rem
+    }
+}
